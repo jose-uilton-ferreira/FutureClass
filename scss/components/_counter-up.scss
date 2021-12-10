@@ -1,0 +1,27 @@
+.counter-up {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: var(--normal-space);
+  border-top: 10px solid var(--primary-color);
+  border-radius: 0 0 10px 10px;
+  text-align: center;
+  color: var(--text-black-color);
+  background: #fff;
+
+  @media screen and (min-width: $desktop) {
+    padding: var(--very-large-space) var(--normal-space);
+  }
+
+  &__number {
+    font-family: monospace;
+    font-size: var(--extra-large-font-size);
+  }
+}
+
+.counter-up-wrapper {
+  display: grid;
+  grid-template-columns: 49% 49%;
+  justify-content: space-between;
+  row-gap: var(--normal-space);
+}

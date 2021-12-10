@@ -1,0 +1,22 @@
+.header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding-top: var(--normal-space);
+
+  &__wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__open-btn {
+    font-size: var(--very-large-font-size);
+    color: var(--text-white-color);
+
+    @media screen and (min-width: $desktop) {
+      display: none;
+    }
+  }
+}

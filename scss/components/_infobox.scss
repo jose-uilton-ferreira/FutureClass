@@ -1,0 +1,30 @@
+.infobox {
+  display: flex;
+  flex-direction: column;
+  row-gap: var(--large-space);
+  margin-top: var(--normal-space);
+
+  @media screen and (min-width: $desktop) {
+    justify-content: space-between;
+      flex-direction: row;
+  }
+
+  &__item {
+    display: flex;
+    align-items: center;
+    column-gap: var(--normal-space);
+    width: 80%;
+    padding: var(--normal-space);
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.25);
+    text-align: center;
+    background: #fff;
+
+    @media screen and (min-width: $desktop) {
+      width: 32%;
+    }
+  }
+
+  &__icon {
+    font-size: var(--very-large-font-size);
+  }
+}

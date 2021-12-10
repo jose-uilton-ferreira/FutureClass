@@ -1,0 +1,22 @@
+h1, h2, h3, p {
+  margin: 10px 0;
+}
+
+h2 {
+  font-family: var(--title-font);
+}
+
+h3, p, a {
+  font-family: var(--text-font);
+}
+
+.highlight-text {
+  font-size: var(--large-font-size);
+  color: var(--secondary-color);
+}
+
+@each $name, $color in $colors {
+  .text-#{$name} {
+    color: var($color);
+  }
+}

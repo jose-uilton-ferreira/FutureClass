@@ -1,0 +1,41 @@
+.hero {
+  padding: var(--biggest-large-space) 0;
+  color: var(--text-white-color);
+  background: var(--bg-dark-color) url('../images/wave-hero.svg') no-repeat left 150%;
+
+  @media screen and (min-width: $desktop) {
+    height: 100vh;
+  }
+
+  &__wrapper {
+    display: grid;
+    grid-template-columns: 100%;
+    row-gap: var(--biggest-large-space);
+
+    @media screen and (min-width: $desktop) {
+      grid-template-columns: 50% 40%;
+      align-items: center;
+      justify-content: space-between;
+      height: 100%;
+    }
+  }
+
+  &__title {
+    font-family: var(--special-font);
+    font-size: var(--very-large-font-size);
+
+    @media screen and (min-width: $desktop) {
+      font-size: var(--biggest-font-size);
+    }
+  }
+
+  &__text {
+    @media screen and (min-width: $desktop) {
+      font-size: var(--large-font-size); 
+    }
+  }
+
+  &__image {
+    max-width: 100%;
+  }
+}

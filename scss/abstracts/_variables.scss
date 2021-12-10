@@ -1,0 +1,36 @@
+:root {
+  --primary-color: #444BFF;
+  --secondary-color: #FF3562;
+  --yellow: #FFCB47;
+  --gray: #949494;
+  --bg-color: #f1f1f1;
+  --bg-dark-color: #0B132B;
+  --text-white-color: #E8F1F2;
+  --text-black-color: #292827;
+
+  --normal-font-size: 1rem;
+  --large-font-size: 1.2em;
+  --very-large-font-size: 1.5rem;
+  --extra-large-font-size: 2rem;
+  --biggest-font-size: 3rem;
+
+  --small-space: 0.5rem;
+  --normal-space: 0.8rem;
+  --large-space: 1.8rem;
+  --very-large-space: 2.2rem;
+  --extra-large-space: 3rem;
+  --biggest-large-space: 4rem;
+
+  --special-font: 'Audiowide', cursive;
+  --title-font: 'Libre Baskerville', serif;
+  --text-font: 'Poppins', sans-serif;
+}
+
+@media screen and (min-width: 1200px) {
+  :root {
+    --normal-font-size: 1.4rem;
+  }
+}
+
+$colors: ("primary": --primary-color, "secondary": --secondary-color, "yellow": --yellow);
+$desktop: 968px;

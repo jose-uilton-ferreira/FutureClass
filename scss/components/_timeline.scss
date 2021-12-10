@@ -1,0 +1,121 @@
+@mixin timeline-item {
+	@for $i from 1 through 5 {
+		&:nth-child(#{$i}) {
+			grid-area: item#{$i};
+		}
+	}
+}
+
+.timeline {
+  display: grid;
+  grid-template-areas: 'item1'
+                       'item2'
+                       'item3'
+                       'item4';
+  row-gap: 20px;
+  position: relative;
+  padding-top: var(--very-large-space);
+
+  @media screen and (min-width: $desktop) {
+    grid-template-areas: '. item1'
+                         'item2 .'
+                         '. item3'
+                         'item4 .';
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 20px;
+    width: 10px;
+    height: 100%;
+    border-radius: 40px;
+    background: var(--primary-color);
+
+    @media screen and (min-width: $desktop) {
+      left: calc(50% - 5px);
+    }
+  }
+
+  &__item {
+    @include timeline-item();
+    position: relative;
+    left: 80px;
+    width: 60%;
+    color: var(--text-black-color);
+    background: #fff;
+
+    @media screen and (min-width: $desktop) {
+      width: 50%;
+    }
+
+    @media screen and (max-width: $desktop) {
+      &::before {
+        counter-increment: section;
+        content: counter(section);
+        position: absolute;
+        top: 0;
+        left: -80px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        background: #fff;
+      } 
+    }
+
+    @media screen and (min-width: $desktop) {
+      
+      &:nth-of-type(even) {
+        left: 250px;
+  
+        &::before {
+          counter-increment: section;
+          content: counter(section);
+          position: absolute;
+          top: 0;
+          right: -70px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          width: 50px;
+          height: 50px;
+          border-radius: 50%;
+          background: #fff;
+        }
+      }
+  
+      &:nth-of-type(odd) {
+        left: 50px;
+  
+        &::after {
+          counter-increment: section;
+          content: counter(section);
+          position: absolute;
+          top: 0;
+          left: -80px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          width: 50px;
+          height: 50px;
+          border-radius: 50%;
+          background: #fff;
+        }
+      }
+
+    }
+    
+  }
+
+  &__title {
+    text-align: center;
+  }
+
+  &__image {
+    max-width: 100%;
+  }
+}

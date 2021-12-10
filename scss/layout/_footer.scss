@@ -1,0 +1,14 @@
+.footer {
+  padding: var(--normal-space) 0;
+  color: var(--text-white-color);
+  background: var(--bg-dark-color);
+
+  &__wrapper {
+    display: grid;
+    grid-template-columns: 100%;
+
+    @media screen and (min-width: $desktop) {
+      grid-template-columns: auto auto auto;
+    }
+  }
+}

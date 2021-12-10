@@ -1,0 +1,43 @@
+.button {
+  display: inline-block;
+  padding: var(--normal-space) var(--very-large-space);
+  margin: var(--normal-space) 0;
+  border-radius: 20px;
+  font-family: var(--text-font);
+  font-weight: 700;
+  text-transform: uppercase;
+
+  &--primary {
+    color: var(--text-white-color);
+    background: var(--primary-color);
+  }
+
+  &--secondary {
+    color: var(--text-white-color);
+    background: var(--secondary-color);
+  }
+
+  &--yellow {
+    color: var(--text-white-color);
+    background: var(--yellow);
+  }
+
+  &--large {
+    display: block;
+    width: 75%;
+    padding: var(--normal-space) var(--very-large-space);
+    margin: 0 auto;
+    font-size: var(--normal-font-size);
+  }
+
+  &--extend {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    display: block;
+    padding: var(--normal-space) 0;
+    margin: auto 0 0;
+    border-radius: 0;
+    text-align: center;
+  }
+}

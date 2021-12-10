@@ -1,0 +1,78 @@
+.menu {
+  position: absolute;
+  top: 0;
+  right: -70vw;
+  width: 70vw;
+  height: 100vh;
+  z-index: 999;
+  transition: all 500ms;
+  background: #fff;
+
+  @media screen and (min-width: $desktop) {
+    position: static;
+    background: none;
+    width: auto;
+    height: auto;
+  }
+
+  &--active {
+    right: 0;
+  }
+
+  &__close-btn {
+    padding-right: var(--large-space);
+    margin-top: var(--normal-space);
+    cursor: pointer;
+    font-size: var(--very-large-font-size);
+    text-align: right;
+
+    @media screen and (min-width: $desktop) {
+      display: none;
+    }
+  }
+
+  &__list {
+    margin-top: var(--normal-space);
+    text-align: center;
+    list-style-type: none;
+
+    @media screen and (min-width: $desktop) {
+      display: flex;
+      align-items: center;
+      column-gap: var(--large-space);
+      margin-top: 0;
+      text-align: left;
+    }
+  }
+
+  &__item {
+    padding: var(--normal-space) 0;
+    border-bottom: 1px solid #ddd;
+    font-size: var(--large-font-size);
+    font-weight: 700;
+
+    @media screen and (min-width: $desktop) {
+      padding: 0;
+      border: none;
+    }
+  }
+
+  &__item--btn {
+    padding: var(--small-space) var(--large-space);
+    margin-top: var(--normal-space);
+    border-radius: 20px;
+    color: var(--text-white-color);
+    background: var(--primary-color);
+
+    @media screen and (min-width: $desktop) {
+      margin-top: 0;
+    }
+  }
+
+  &__link {
+    color: var(--text-black-color);
+    @media screen and (min-width: $desktop) {
+      color: var(--text-white-color);
+    }
+  }
+}

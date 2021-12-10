@@ -1,0 +1,13 @@
+.nav {
+  &__list {
+    list-style-type: none;
+  }
+
+  &__item {
+    margin-bottom: var(--normal-space);
+  }
+
+  &__link {
+    color: var(--gray);
+  }
+}
